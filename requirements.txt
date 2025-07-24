@@ -1,5 +1,8 @@
 PyYAML~=6.0.2
 
+# --- Database ---
+psycopg2-binary>=2.9.0
+
 # --- LangChain 核心与扩展 ---
 langchain==0.3.14
 langchain-core>=0.1.0

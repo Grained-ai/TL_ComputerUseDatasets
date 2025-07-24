@@ -11,82 +11,91 @@ Main Components:
 - Utility functions and API client
 """
 
-from .list_fetcher import BilibiliListFetcher
-from .video_fetcher import BilibiliVideoFetcher
-from .models import (
-    VideoMetadata,
-    UserInfo,
-    VideoStats,
-    CommentInfo,
-    PlaylistInfo,
-    SearchResult,
-    APIResponse,
-    VideoQuality,
-    VideoStatus
-)
-from .utils import (
-    BilibiliAPIClient,
-    RateLimiter,
-    DataValidator,
-    BilibiliUtils,
-    APIError,
-    ValidationError,
-    APIConfig
-)
+# TODO: 临时注释掉未实现的模块，避免导入错误
+# from .list_fetcher import BilibiliListFetcher
+# from .video_fetcher import BilibiliVideoFetcher
+# from .models import (
+#     VideoMetadata,
+#     UserInfo,
+#     VideoStats,
+#     CommentInfo,
+#     PlaylistInfo,
+#     SearchResult,
+#     APIResponse,
+#     VideoQuality,
+#     VideoStatus
+# )
+# from .utils import (
+#     BilibiliAPIClient,
+#     RateLimiter,
+#     DataValidator,
+#     BilibiliUtils,
+#     APIError,
+#     ValidationError,
+#     APIConfig
+# )
+
+# 导入已实现的模块
+from .task_hub import TaskHub
 
 __version__ = "1.0.0"
 __author__ = "TL_ComputerUseDatasets Team"
 
 # Main exports
 __all__ = [
-    # Fetcher classes
-    "BilibiliListFetcher",
-    "BilibiliVideoFetcher",
+    # Task management
+    "TaskHub",
     
-    # Data models
-    "VideoMetadata",
-    "UserInfo", 
-    "VideoStats",
-    "CommentInfo",
-    "PlaylistInfo",
-    "SearchResult",
-    "APIResponse",
-    "VideoQuality",
-    "VideoStatus",
-    
-    # Utility classes
-    "BilibiliAPIClient",
-    "RateLimiter",
-    "DataValidator",
-    "BilibiliUtils",
-    "APIConfig",
-    
-    # Exceptions
-    "APIError",
-    "ValidationError"
+    # TODO: 待实现的模块
+    # # Fetcher classes
+    # "BilibiliListFetcher",
+    # "BilibiliVideoFetcher",
+    # 
+    # # Data models
+    # "VideoMetadata",
+    # "UserInfo", 
+    # "VideoStats",
+    # "CommentInfo",
+    # "PlaylistInfo",
+    # "SearchResult",
+    # "APIResponse",
+    # "VideoQuality",
+    # "VideoStatus",
+    # 
+    # # Utility classes
+    # "BilibiliAPIClient",
+    # "RateLimiter",
+    # "DataValidator",
+    # "BilibiliUtils",
+    # "APIConfig",
+    # 
+    # # Exceptions
+    # "APIError",
+    # "ValidationError"
 ]
 
-# Convenience functions for quick access
-def create_list_fetcher(**kwargs) -> BilibiliListFetcher:
-    """
-    Create a BilibiliListFetcher instance with optional configuration.
-    
-    Args:
-        **kwargs: Configuration parameters for the fetcher
-        
-    Returns:
-        Configured BilibiliListFetcher instance
-    """
-    return BilibiliListFetcher(**kwargs)
+# TODO: 待实现的便捷函数
+# # Convenience functions for quick access
+# def create_list_fetcher(**kwargs) -> BilibiliListFetcher:
+#     """
+#     Create a BilibiliListFetcher instance with optional configuration.
+#     
+#     Args:
+#         **kwargs: Configuration parameters for the fetcher
+#         
+#     Returns:
+#         Configured BilibiliListFetcher instance
+#     """
+#     return BilibiliListFetcher(**kwargs)
 
-def create_video_fetcher(**kwargs) -> BilibiliVideoFetcher:
-    """
-    Create a BilibiliVideoFetcher instance with optional configuration.
-    
-    Args:
-        **kwargs: Configuration parameters for the fetcher
-        
-    Returns:
-        Configured BilibiliVideoFetcher instance
-    """
-    return BilibiliVideoFetcher(**kwargs)
+# def create_video_fetcher(**kwargs) -> BilibiliVideoFetcher:
+#     """
+#     Create a BilibiliVideoFetcher instance with optional configuration.
+#     
+#     Args:
+#         **kwargs: Configuration parameters for the fetcher
+#         
+#     Returns:
+#         Configured BilibiliVideoFetcher instance
+#     """
+#     return BilibiliVideoFetcher(**kwargs)
