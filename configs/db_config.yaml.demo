@@ -1,0 +1,27 @@
+# 数据库配置示例文件
+# 复制此文件为 db_config.yaml 并填入实际的数据库连接信息
+
+database:
+  # 数据库主机地址
+  host: "your_database_host"
+  
+  # 数据库端口
+  port: 5432
+  
+  # 数据库名称
+  database: "bilibili_tasks"
+  
+  # 数据库用户名
+  username: "your_username"
+  
+  # 数据库密码
+  password: "your_password"
+  
+  # 连接池配置（可选）
+  pool_config:
+    # 最小连接数
+    min_connections: 1
+    # 最大连接数
+    max_connections: 10
+    # 连接超时时间（秒）
+    connection_timeout: 30
